@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="./js/message.js"></script>  
+<script type="text/javascript">
+	function msg3() {
+		// Comentario de una linea en javascript
+		alert("Entra3")
+		//document.getElementById("test").value="Test";
+		document.getElementById("test").value="Test3";
+		/*
+		 * Comentarios de varias lineas, como ves es igual que en Java
+		 */
+	}
+</script>
+
+</head>
+<body>
+	<p>Probando Javascript externo</p>
+	<form>
+		<input type="button" value="click" onclick="msg()" />
+	</form>
+	
+	<input type="text" id="test" value="Prueba">
+	
+	<br>
+	<script type="text/javascript">
+		document.write("<H1>"+sum(10,20)+"</H1>");
+	</script>
+	
+	<br>
+	<input type="button" value="Pregunta T/F" onclick="mensajeTrueFalse()" />
+	
+	<br><br>
+	<input type="button" value="Pregunta" onclick="mensajePregunta()" />
+	
+	<input type="button" value="Pregunta" onclick="pintaTexto('Hola',5)" />
+
+	
+</body>
+
+</html>
