@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/*ESTILOS GENERALES*/
+ body {
+    background-color: orange;
+  }
+ h1 {
+    text-align: center;
+    color: blue;
+    font-family: arial;
+  }
+
+  .centrado-plata {
+    text-align: center;
+    background-color: silver;
+  }
+
+  .derecha {
+    text-align: right;
+    color: blue;
+  }
+  .rojo { color: red; }
+  .verde { color: green; }
+  .negro { color: black; }
+  .centrado-azul-plata {
+  text-align: center;       /* centra el texto */
+  color: blue;              /* texto azul */
+  background-color: silver; /* fondo color plata */
+  padding: 0px;            /* opcional, para separar el texto del borde */
+  font-size: 20px; /* 20 píxeles de alto */
+}
+.arial{
+  font-family: Arial, sans-serif;
+}
+  
