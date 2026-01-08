@@ -1,7 +1,10 @@
-p {background-color: white;
-	color:red;}
+@import url("./base.css");
+p {color:red;}
 .p3 {
-	
     color:red;
-    background-color: white;
+    background-color: blueviolet;
+}
+
+.arial {
+	    font-family: Arial, sans-serif;
 }
