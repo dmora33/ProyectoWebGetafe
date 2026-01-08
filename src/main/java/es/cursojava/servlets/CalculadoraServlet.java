@@ -2,6 +2,8 @@ package es.cursojava.servlets;
 
 import java.io.IOException;
 
+import es.cursojava.dto.CalculadoraDto;
+import es.cursojava.service.CalculadoraService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -31,22 +33,16 @@ public class CalculadoraServlet extends HttpServlet {
 				String operacionJava = request.getParameter("operacion"); // estoy recogiendo el parametro nombre del formulario
 				int numero1Java =Integer.parseInt(request.getParameter("numero1")); // estoy recogiendo del formulario
 				int numero2Java =Integer.parseInt(request.getParameter("numero2")); // estoy recogiendo del formulario
-				switch (operacionJava) {
-				case "suma" ->
-					resultado=numero1Java + numero2Java;
-					
-				case "resta" ->
-					resultado=numero1Java - numero2Java;
-					
-				case "multiplicacion" ->
-					resultado=numero1Java * numero2Java;
-
-				default ->
-					System.out.println("error operación");
-					
-				}
-		response.getWriter().println("El resultado es: "+ resultado);
+				
+				CalculadoraDto calculadoraDto = new CalculadoraDto(operacionJava, numero1Java, numero2Java);
+				// creo objeto servicio
+					CalculadoraService calculadoraService = new CalculadoraService();
+				
+					String resultadoServicio = calculadoraService.calcular(calculadoraDto);
+					response.getWriter().println(resultadoServicio);
 	}
+	
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

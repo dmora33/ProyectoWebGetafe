@@ -1,0 +1,9 @@
+Crear un html con un formulario que permita ingresar los datos de un alumno: (mirar datos de la tabla o el Entity). 
+
+Al enviar el formulario al servlet se genera DTO con los datos de los parámetros que han llegado
+los datos deben ser validados (en la capa de servicio) para asegurarse de que se cumplen las restricciones de la base de datos
+
+Si los datos son válidos, 
+	+se inserta la informacíón en la base de datos y se muestra un mensaje de confirmación con los datos ingresados; 
+	
+si no son validos, mostrar mensajes de error específicos para cada campo inválido.

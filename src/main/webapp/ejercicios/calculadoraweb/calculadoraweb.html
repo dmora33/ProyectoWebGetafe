@@ -7,46 +7,38 @@
 <body>
 	<p>
 		<a onmouseover=""
-			href="/proyectoWebDmora33/CalculadoraServlet?numero1=7&numero2=8&operacion=suma">Sumar
+			href="http://localhost:8080/proyectoWebDmora33/CalculadoraServlet?numero1=7&numero2=8&operacion=suma">Sumar
 			7 + 8</a>
 	</p>
 	<p>
 		<a onmouseover=""
-			href="/proyectoWebDmora33/CalculadoraServlet?numero1=12&numero2=5&operacion=resta">Resta
+			href="http://localhost:8080/proyectoWebDmora33/CalculadoraServlet?numero1=12&numero2=5&operacion=resta">Resta
 			12 - 5</a>
 	</p>
 	<p>
 		<a onmouseover=""
-			href="/proyectoWebDmora33/CalculadoraServlet?numero1=5&numero2=3&operacion=multiplicacion">Multiplicación
+			href="http://localhost:8080/proyectoWebDmora33/CalculadoraServlet?numero1=5&numero2=3&operacion=multiplicacion">Multiplicación
 			5 * 3</a>
 	</p>
 
 	<form action="/proyectoWebDmora33/CalculadoraServlet" method="post">
 
-    <!-- Formulario que pide dos números y la operación a realizar -->
+		<!-- Formulario que pide dos números y la operación a realizar -->
 
-    Operación:
-    <select name="operacion">
-        <option value="suma">Suma</option>
-        <option value="resta">Resta</option>
-        <option value="multiplicacion">Multiplicación</option>
-    </select>
+		Operación: <select name="operacion">
+			<option value="suma">Suma</option>
+			<option value="resta">Resta</option>
+			<option value="multiplicacion">Multiplicación</option>
+		</select> <br>
+		<br> Número 1: <input type="number" name="numero1" required>
 
-    <br><br>
+		<br>
+		<br> Número 2: <input type="number" name="numero2" required>
 
-    Número 1:
-    <input type="number" name="numero1" required>
+		<br>
+		<br> <input type="submit" value="Enviar datos">
+	</form>
 
-    <br><br>
-
-    Número 2:
-    <input type="number" name="numero2" required>
-
-    <br><br>
-
-    <input type="submit" value="Enviar datos">
-</form>
-	
 
 </body>
 </html>
