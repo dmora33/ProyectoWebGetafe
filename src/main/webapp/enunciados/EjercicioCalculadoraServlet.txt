@@ -1,0 +1,12 @@
+calculadora.html
+
+Parte 1
+===================================
+3 enlaces
+	+ suma  7 8 ->
+	+ resta 12 5 -> 
+	+ multiplicacion
+
+Parte 2
+===================================	
+Formulario que pida los datos de dos números y la operación que se quiere realizar, al pulsar el botón enviar se realizará la operación en el servidor y se mostrará el resultado en la página web

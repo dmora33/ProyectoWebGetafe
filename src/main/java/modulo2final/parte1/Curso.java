@@ -1,4 +1,4 @@
-package es.cursojava.examen.modulo2final.parte1;
+package modulo2final.parte1;
 
 public interface Curso {
 
