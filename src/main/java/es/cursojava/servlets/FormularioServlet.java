@@ -29,8 +29,9 @@ public class FormularioServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// tendria que recoger los parametros del formulario todos... vago
-		String nombreJava = request.getParameter("nombre"); // estoy recogiendo el parametro nombre del formulario
-		int apellidoJava =Integer.parseInt(request.getParameter("edad")); // estoy recogiendo el parametro edad del formulario
+		String nombreJava = request.getParameter("Nombre"); // estoy recogiendo el parametro nombre del formulario
+		int apellidoJava =Integer.parseInt(request.getParameter("Edad")); // estoy recogiendo el parametro edad del formulario
+		String emailJava = request.getParameter("Email"); // estoy recogiendo el parametro email del formulario
 		System.out.println("FormularioServlet doGet");
 		response.getWriter().append("<p>hola esto es un parrafo</p>").append(request.getContextPath());
 	}
@@ -41,7 +42,7 @@ public class FormularioServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
 		doGet(request, response);
 	}
 

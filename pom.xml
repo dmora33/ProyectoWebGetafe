@@ -20,6 +20,14 @@
   </properties>
 
   <dependencies>
+  	<!-- Hibernate -->
+		<!-- Hibernate Core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.6.12.Final</version>
+		</dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -64,4 +72,5 @@
       </plugins>
     </pluginManagement>
   </build>
+  
 </project>
