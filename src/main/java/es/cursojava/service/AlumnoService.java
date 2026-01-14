@@ -1,10 +1,14 @@
 package es.cursojava.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import es.cursojava.dto.AlumnoDto;
 import es.cursojava.entities.AlumnoEntiti;
 import es.cursojava.utils.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 public class AlumnoService {
 	
@@ -53,5 +57,32 @@ public class AlumnoService {
             // si se quisiera cerrar: if (session != null && session.isOpen()) session.close();
         }
     }
+	
+	// va a devolver el listado en un Stringbuilder para poder mostrarlo en el servlet.
+	public List<AlumnoEntiti> listarAlumnos() {
+	    Session session = null;
+
+	    try {
+	        session = HibernateUtil.getSessionFactory();
+
+	        session.beginTransaction();
+
+	        List<AlumnoEntiti> listado =
+	                session.createQuery(
+	                        "FROM AlumnoEntiti",
+	                        AlumnoEntiti.class
+	                ).list();
+
+	        session.getTransaction().commit();
+
+	        return listado;
+
+	    } catch (Exception e) {
+	        throw new RuntimeException(
+	                "Error al listar los alumnos desde la base de datos", e
+	        );
+	    }
+	}
+
 
 }
