@@ -20,12 +20,12 @@ public class AlumnoServlet extends HttpServlet {
 	        throws ServletException, IOException {
 
 	    AlumnoService alumnoService = new AlumnoService();
-	    List<AlumnoEntiti> listado = alumnoService.listarAlumnos();
+	//    List<AlumnoEntiti> listado = alumnoService.listarAlumnos();
 
 	    
 	    
 	    // Pasar la lista a la JSP
-	    req.setAttribute("alumnos", listado);
+	 //   req.setAttribute("alumnos", listado);
 	    req.getRequestDispatcher("listarAlumnos.jsp").forward(req, resp);
 	}
 
